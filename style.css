@@ -1,0 +1,173 @@
+    :root{
+      --bg:#0f1720;
+      --card:#111827;
+      --muted:#9aa4b2;
+      --accent:#06b6d4;
+      --glass: rgba(255,255,255,0.04);
+      --radius:14px;
+      --max-width:1100px;
+      --accent-2:#0ea5e9;
+      --white: #f8fafc;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;}
+    html {scroll-behavior: smooth;}
+
+    body{
+      margin:0;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background:linear-gradient(180deg,#071022 0%, #0b1a2a 100%);
+      color:var(--white);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.45;
+      -webkit-tap-highlight-color: transparent;
+      padding-bottom:80px;
+    }
+
+    a{color:inherit}
+
+    .container{max-width:var(--max-width);margin:0 auto;padding:24px}
+
+    
+    header{
+      position:fixed;left:0;right:0;top:0;z-index:60;
+      backdrop-filter: blur(6px);
+      background:linear-gradient(180deg, rgba(2,6,23,0.6), rgba(2,6,23,0.25));
+      border-bottom:1px solid rgba(80, 241, 5, 0.03)
+    }
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;gap:16px;max-width:var(--max-width);margin:0 auto;padding:12px 20px}
+
+    .brand{display:flex;align-items:center;gap:12px}
+    .brand .logo{width:42px;height:42px;border-radius:10px;background:linear-gradient(135deg,var(--accent),var(--accent-2));display:flex;align-items:center;justify-content:center;font-weight:700}
+    .brand h1{font-size:16px;margin:0}
+
+    nav ul{display:flex;gap:18px;list-style:none;margin:0;padding:0;align-items:center}
+    nav a{color:var(--white);text-decoration:none;padding:8px 12px;border-radius:8px;font-weight:600;font-size:15px}
+    nav a:hover{background:var(--glass);color:var(--accent-2)}
+
+    
+    .menu-toggle{display:none}
+    .hamburger{display:none}
+
+    
+    .hero{padding-top:96px;padding-bottom:40px}
+    .hero-grid{display:grid;grid-template-columns:360px 1fr;gap:28px;align-items:center}
+
+    .card{
+      background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border-radius:var(--radius);padding:20px;border:1px solid rgba(255,255,255,0.04)
+    }
+
+    .photo{width:370px;height:320px;overflow:hidden;display:block;background:none;}
+    .photo img{width: 320px;border-radius:5%;height:100%;object-fit:cover;display:block;border:none;outline:none;background-color:none;}
+
+    .intro h2{margin:0;color:var(--accent-2);
+      font-size:28px}
+    .intro p.lead{font-size:18px;color:var(--muted);
+      margin:12px 0 18px}
+
+    .cta-row{display:flex;gap:12px;flex-wrap:wrap}
+    .btn{display:inline-flex;
+      align-items:center;gap:10px;padding:10px 14px;border-radius:10px;background:var(--accent);color:#042; font-weight:700;text-decoration:none}
+    .btn.secondary{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--white)}
+
+   
+    .two-col{display:grid;grid-template-columns:1fr 360px;gap:28px}
+    .two-col h3 {text-align: center;color: #06b6d4;}
+
+    .about p{color:var(--muted);margin:0 0 12px}
+
+    .services{display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+    margin-top:12px}
+    .service{background:rgba(255,255,255,0.02);
+    padding:14px;border-radius:12px;min-width:180px;border:1px solid rgba(255,255,255,0.03)}
+    .service h4{margin:0 0 8px;color:var(--accent-2)}
+
+   
+    .skills.skill{margin-bottom:16px}
+    .skill.label{display:flex;justify-content:space-between;font-weight:600;color:var(--white);margin-bottom:8px}
+    .progress{height:14px;background:rgba(255,255,255,0.03);border-radius:999px;overflow:hidden}
+    .progress > i{display:block;height:100%;background:linear-gradient(90deg,var(--accent),var(--accent-2));width:0;border-radius:999px;transition:width 1.2s ease}
+
+   
+    .projects-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .project-card{padding:18px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border:1px solid rgba(255,255,255,0.03)}
+    .project-card h3{margin:0 0 8px;color:var(--accent-2)}
+    .project-card p{color:var(--muted);margin:0 0 12px}
+
+    
+    .contact-grid{display:grid;grid-template-columns:1fr 360px;gap:20px;margin-bottom: 40px;}
+    .contact-card{padding:18px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));}
+    .socials{display:flex;gap:10px;flex-wrap:wrap ;}
+
+    .social:hover {transform: scale(1.2);}
+
+    .socials a{padding:12px 18px;border-radius:12px;background:rgba(255,255,255,0.03);text-decoration:none;color:var(--white)}
+
+  footer {
+    padding: 20px 15px;
+    text-align: center;
+    color: var(--white);
+    background: #0f1720; 
+    border-top: 1px solid rgba(255,255,255,0.05);
+}
+
+
+    
+    @media (max-width:1000px){
+      .hero-grid{grid-template-columns:1fr;}
+      .two-col{grid-template-columns:1fr;}
+      .contact-grid{grid-template-columns:1fr}
+      .projects-grid{grid-template-columns:repeat(2,1fr)}
+    }
+    @media (max-width:700px){
+      nav ul{display:none}
+      .hamburger{display:block}
+      .menu-toggle:checked + nav ul{display:flex;flex-direction:column;position:absolute;left:16px;right:16px;top:68px;background:linear-gradient(180deg, rgba(2,6,23,0.9), rgba(2,6,23,0.85));padding:12px;border-radius:12px}
+      .projects-grid{grid-template-columns:1fr}
+      .photo{width:100%;height:240px}
+    }
+
+   
+
+    .muted{color:var(--muted);font-size:14px}
+    .mb-16{margin-bottom:16px}
+
+    
+.logo-foto {
+  width: 42px;              
+  height: 42px;
+  border-radius: 50%;       
+  object-fit: cover;        
+  border: 2px solid var(--accent); 
+  margin-left: 8px;         
+  transition: transform 0.3s ease; 
+}
+
+
+.logo-foto:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.social {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;          
+  height: 36px;         
+  border-radius: 50%;    
+  color: white;          
+  text-decoration: none; 
+  font-size: 18px;      
+  margin-right: 8px;     
+  transition: transform 0.2s ease;
+}
+
+.social:hover {
+  transform: scale(1.2); 
+}
+
